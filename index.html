@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>سيرة للسياحة والسفر والحج والعمرة</title>
+<meta name="description" content="حجوزات طيران وفنادق، حج وعمرة، تأشيرات وإنجاز معاملات وعناية تليق بك وبرحلتك.">
+<link rel="canonical" href="https://seeratravel.co/">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://seeratravel.co/">
+<meta property="og:title" content="سيرة للسياحة والسفر والحج والعمرة">
+<meta property="og:description" content="حجوزات طيران وفنادق، حج وعمرة، تأشيرات وإنجاز معاملات وعناية تليق بك وبرحلتك.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="سيرة للسياحة والسفر والحج والعمرة">
+<meta name="twitter:description" content="حجوزات طيران وفنادق، حج وعمرة، تأشيرات وإنجاز معاملات وعناية تليق بك وبرحلتك.">
+<script type="application/ld+json">{
+  "@context":"https://schema.org","@type":"TravelAgency",
+  "name":"سيرة للسياحة والسفر والحج والعمرة",
+  "url":"https://seeratravel.co",
+  "telephone":["+962798019275","+962777982565"],
+  "email":"info@seeratravel.co",
+  "address":{"@type":"PostalAddress","streetAddress":"شارع عبدالله أبو غوشة - مجمع رائد خلف","addressLocality":"عمّان","addressCountry":"JO"},
+  "sameAs":["https://www.facebook.com/seeratravel","https://www.instagram.com/seeratravel"]
+}</script>
+
+<style>
+/* ─── خطوط ─── */
+@font-face{font-family:'Zagel';src:url('ZagelArabicITF-Bold.otf')    format('opentype');font-weight:700;font-display:swap}
+@font-face{font-family:'Zagel';src:url('ZagelArabicITF-Medium.otf')  format('opentype');font-weight:500;font-display:swap}
+@font-face{font-family:'Zagel';src:url('ZagelArabicITF-Regular.otf') format('opentype');font-weight:400;font-display:swap}
+@font-face{font-family:'Zagel';src:url('ZagelArabicITF-Light.otf')   format('opentype');font-weight:300;font-display:swap}
+
+/* حدود متحركة */
+@property --fa{syntax:'<angle>';initial-value:0deg;inherits:false}
+
+/* ─── متغيرات ─── */
+:root{
+  --accent:#e7fba0;
+  --green: #014b30;
+  --dim:   rgba(1,75,48,.43);
+  --faint: rgba(1,75,48,.06);
+  --border:rgba(1,75,48,.08);
+  --r:     16px;
+  --pill:  100px;
+  --ease:  cubic-bezier(.23,1,.32,1);
+}
+
+/* ─── ضبط عام ─── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+body{
+  font-family:'Zagel',system-ui,sans-serif;
+  background:#fff;color:var(--green);
+  overflow-x:hidden;direction:rtl;line-height:1.65;
+}
+img{display:block;max-width:100%}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+button{cursor:pointer;border:none;background:none;font-family:inherit;color:inherit}
+
+/* ─── حركة الكشف ─── */
+.reveal{
+  opacity:0;transform:translateY(18px);
+  transition:opacity .74s var(--ease),transform .74s var(--ease);
+}
+.reveal.in{opacity:1;transform:none}
+.d1{transition-delay:.12s}.d2{transition-delay:.24s}.d3{transition-delay:.36s}
+
+/* إطار دوار مشترك */
+@keyframes frameSpin{to{--fa:360deg}}
+@keyframes heroReveal{to{opacity:1;transform:none}}
+
+/* ═══ شريط التنقل ═══ */
+.nav{
+  position:fixed;top:14px;
+  left:50%;transform:translateX(-50%);
+  z-index:900;width:min(960px,92vw);
+  display:flex;align-items:center;justify-content:space-between;
+  background:rgba(231,251,160,.82);
+  backdrop-filter:blur(28px) saturate(1.7);
+  -webkit-backdrop-filter:blur(28px) saturate(1.7);
+  border:1px solid rgba(1,75,48,.13);
+  border-radius:var(--pill);
+  padding:10px 20px 10px 16px;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.6), 0 2px 20px rgba(1,75,48,.06);
+  transition:box-shadow .4s var(--ease),background .3s;
+}
+.nav.scrolled{
+  background:rgba(231,251,160,.92);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.6), 0 6px 32px rgba(1,75,48,.10);
+}
+.nav-logo{flex-shrink:0}
+.nav-logo img{height:30px}
+.nav-links{display:flex;gap:30px;justify-content:center;align-items:center;margin:0 auto}
+.nav-link{
+  font-size:.88rem;font-weight:500;
+  position:relative;padding-bottom:2px;transition:opacity .25s;
+}
+.nav-link::after{
+  content:'';position:absolute;bottom:0;right:0;
+  width:0;height:1.5px;background:var(--green);
+  transition:width .3s var(--ease);
+}
+.nav-link:hover{opacity:.6}
+.nav-link.active::after{width:100%}
+.nav-end{flex-shrink:0;display:flex;align-items:center;gap:8px}
+.nav-cta{
+  background:var(--green);color:var(--accent);
+  padding:8px 20px;border-radius:var(--pill);
+  font-size:.85rem;font-weight:700;
+  transition:opacity .25s,transform .3s var(--ease);
+}
+.nav-cta:hover{opacity:.8;transform:translateY(-1px)}
+.nav-ham{
+  display:none;flex-direction:column;justify-content:center;align-items:center;
+  gap:5px;width:36px;height:36px;border-radius:50%;padding:7px;
+}
+.nav-ham span{
+  display:block;width:17px;height:1.5px;background:var(--green);
+  border-radius:2px;transform-origin:center;
+  transition:transform .32s var(--ease),opacity .25s;
+}
+.nav-ham.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.nav-ham.open span:nth-child(2){opacity:0;transform:scaleX(0)}
+.nav-ham.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+
+/* قائمة الجوّال */
+/* لوحة القائمة العائمة */
+.mob{
+  position:fixed;top:76px;left:50%;
+  transform:translateX(-50%) translateY(-10px);
+  z-index:800;width:min(960px,92vw);
+  background:rgba(231,251,160,.15);
+  backdrop-filter:blur(20px) saturate(1.5);
+  -webkit-backdrop-filter:blur(20px) saturate(1.5);
+  border:1px solid rgba(255,255,255,.35);
+  border-radius:20px;
+  box-shadow:0 8px 40px rgba(1,75,48,.09),0 2px 10px rgba(1,75,48,.05);
+  padding:14px 0 18px;
+  opacity:0;pointer-events:none;
+  transition:opacity .25s var(--ease),transform .25s var(--ease);
+}
+.mob.open{opacity:1;pointer-events:all;transform:translateX(-50%) translateY(0)}
+.mob-close{
+  position:absolute;top:10px;left:14px;
+  width:26px;height:26px;border-radius:50%;
+  background:rgba(1,75,48,.06);border:1px solid rgba(1,75,48,.07);
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;transition:background .2s;
+}
+.mob-close:hover{background:rgba(1,75,48,.12)}
+.mob-close svg{width:12px;height:12px;stroke:var(--green);fill:none;stroke-width:1.8;stroke-linecap:round}
+.mob-nav{display:flex;flex-direction:column;padding:6px 0}
+.mob-link{
+  font-size:.96rem;font-weight:500;color:var(--green);
+  padding:11px 24px;text-align:right;
+  transition:background .18s;
+}
+.mob-link:hover{background:rgba(1,75,48,.05)}
+.mob-sep{height:1px;background:rgba(1,75,48,.08);margin:6px 20px}
+.mob-social{
+  display:flex;gap:12px;justify-content:center;padding:12px 24px 2px;
+}
+.mob-social a{
+  width:32px;height:32px;border-radius:50%;
+  background:rgba(1,75,48,.06);border:1px solid rgba(1,75,48,.08);
+  display:flex;align-items:center;justify-content:center;
+  transition:background .2s,transform .2s;
+}
+.mob-social a:hover{background:rgba(1,75,48,.12);transform:scale(1.08)}
+.mob-social svg{width:14px;height:14px;stroke:var(--green);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+
+/* ═══ البطل ═══ */
+.hero{
+  min-height:100svh;background:#fff;
+  position:relative;overflow:hidden;
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  padding:130px 48px 80px;text-align:center;
+}
+/* توهّج شعاعي أقوى بطبقتين */
+.hero::before{
+  content:'';position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 76% 62% at 50% 66%, rgba(231,251,160,.40) 0%, transparent 65%),
+    radial-gradient(ellipse 38% 28% at 20% 15%, rgba(231,251,160,.12) 0%, transparent 55%);
+  pointer-events:none;
+}
+
+/* المدارات */
+.orbital{
+  position:absolute;top:50%;left:50%;
+  width:min(700px,88vw);
+  transform:translate(-50%,-50%);
+  pointer-events:none;
+}
+
+/* دخول البطل */
+.hero-kicker{
+  font-size:.74rem;font-weight:400;color:var(--dim);
+  display:flex;align-items:center;gap:10px;justify-content:center;
+  margin-bottom:26px;
+  opacity:0;animation:heroReveal 1s .1s var(--ease) forwards;
+}
+.hero-kicker::before,.hero-kicker::after{
+  content:'';display:block;width:22px;height:1px;background:var(--dim);
+}
+.hero-h1{
+  font-size:clamp(2.9rem,7.5vw,5.8rem);
+  font-weight:700;line-height:1.12;margin-bottom:40px;
+  opacity:0;animation:heroReveal 1s .32s var(--ease) forwards;
+}
+.hero-h1 em{
+  font-style:normal;position:relative;display:inline-block;
+}
+.hero-h1 em::after{
+  content:'';position:absolute;bottom:-3px;left:0;right:0;
+  height:3px;background:var(--accent);border-radius:2px;
+}
+.hero-inner{position:relative;z-index:1;max-width:840px}
+.hero-btns{
+  display:flex;gap:10px;justify-content:center;flex-wrap:wrap;
+  opacity:0;animation:heroReveal 1s .56s var(--ease) forwards;
+}
+.btn-p{
+  background:var(--green);color:var(--accent);
+  padding:14px 36px;border-radius:var(--pill);
+  font-size:.95rem;font-weight:700;display:inline-block;
+  transition:opacity .25s,transform .3s var(--ease);
+}
+.btn-p:hover{opacity:.8;transform:translateY(-2px)}
+.btn-g{
+  background:transparent;color:var(--green);
+  padding:13px 36px;border-radius:var(--pill);
+  border:1.5px solid rgba(1,75,48,.18);
+  font-size:.95rem;font-weight:500;display:inline-block;
+  transition:border-color .25s,transform .3s var(--ease);
+}
+.btn-g:hover{border-color:var(--green);transform:translateY(-2px)}
+
+/* مؤشر التمرير */
+.scroll-hint{
+  position:absolute;bottom:26px;left:50%;transform:translateX(-50%);
+  color:var(--dim);display:flex;flex-direction:column;align-items:center;gap:3px;
+  animation:shint 2.8s ease-in-out infinite;
+  opacity:0;animation:heroReveal .8s .9s var(--ease) forwards, shint 2.8s 1.8s ease-in-out infinite;
+}
+.scroll-hint svg{width:14px;height:14px;stroke:var(--dim);fill:none;stroke-width:1.5;stroke-linecap:round}
+@keyframes shint{
+  0%,100%{transform:translateX(-50%) translateY(0)}
+  55%{transform:translateX(-50%) translateY(7px)}
+}
+
+/* ═══ خدمات ═══ */
+.services{padding:96px 48px;border-top:1px solid var(--border)}
+.svc-wrap{max-width:1100px;margin:0 auto}
+.svc-head{
+  display:flex;align-items:flex-end;justify-content:space-between;
+  gap:20px;flex-wrap:wrap;margin-bottom:44px;
+}
+.svc-head .sub{font-size:.88rem;color:var(--dim);max-width:260px;text-align:start;line-height:1.8}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.svc-card{
+  background:#fff;border:1px solid var(--border);
+  border-radius:var(--r);padding:30px 24px 26px;
+  cursor:pointer;position:relative;overflow:hidden;
+  transition:transform .4s var(--ease),box-shadow .4s,border-color .3s;
+}
+.svc-card-bg{
+  position:absolute;inset:0;
+  background:var(--accent);opacity:0;transition:opacity .35s;
+}
+.svc-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 14px 40px rgba(1,75,48,.07);
+  border-color:rgba(1,75,48,.12);
+}
+.svc-card:hover .svc-card-bg{opacity:.1}
+.svc-card.active{transform:translateY(-4px);box-shadow:0 10px 32px rgba(1,75,48,.07)}
+.svc-card.active .svc-card-bg{opacity:.14}
+.svc-icon{
+  display:block;width:34px;height:34px;
+  stroke:var(--green);fill:none;
+  stroke-width:1.35;stroke-linecap:round;stroke-linejoin:round;
+  margin-bottom:18px;position:relative;z-index:1;
+  transition:transform .4s var(--ease);
+}
+.svc-icon-fill{stroke:none;fill:var(--green)}
+.svc-card:hover .svc-icon{transform:scale(1.1)}
+.svc-name{font-size:.98rem;font-weight:700;margin-bottom:7px;position:relative;z-index:1}
+.svc-desc{font-size:.83rem;color:var(--dim);line-height:1.8;position:relative;z-index:1}
+
+/* ═══ أرقام ═══ */
+.stats{
+  padding:60px 48px;
+  border-top:1px solid var(--border);border-bottom:1px solid var(--border);
+}
+.stats-inner{max-width:640px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr}
+.stat{text-align:center;padding:24px 20px;transition:transform .35s var(--ease)}
+.stat:first-child{border-left:1px solid var(--border)}
+.stat:hover{transform:translateY(-3px)}
+.stat-n{display:block;font-size:clamp(2.6rem,5vw,4rem);font-weight:700;line-height:1;margin-bottom:8px}
+.stat-l{font-size:.85rem;color:var(--dim);line-height:1.5}
+
+/* ═══ عن سيرة ═══ */
+.about{padding:96px 48px;border-bottom:1px solid var(--border)}
+.about-inner{
+  max-width:1100px;margin:0 auto;
+  display:grid;grid-template-columns:1.1fr .9fr;gap:72px;align-items:start;
+}
+.sec-tag{
+  font-size:.72rem;font-weight:400;color:var(--dim);
+  display:flex;align-items:center;gap:9px;margin-bottom:12px;
+}
+.sec-tag::before{content:'';display:block;width:16px;height:1px;background:var(--dim)}
+.about-h{font-size:clamp(1.45rem,2.6vw,2.05rem);font-weight:700;line-height:1.5;margin-bottom:22px}
+.about-body{font-size:.93rem;color:var(--dim);line-height:2;margin-bottom:22px}
+
+.about-link{
+  display:inline-flex;align-items:center;gap:7px;
+  font-weight:700;font-size:.86rem;
+  border-bottom:1.5px solid rgba(1,75,48,.18);padding-bottom:2px;
+  transition:border-color .25s,opacity .25s;
+}
+.about-link:hover{opacity:.6;border-color:var(--green)}
+.about-link svg{width:12px;height:12px;stroke:var(--green);fill:none;stroke-width:2;stroke-linecap:round;transform:rotate(180deg)}
+
+/* بطاقة الاقتباس بحدود متحركة */
+.about-card-wrap{
+  padding:2px;
+  border-radius:calc(var(--r) + 2px);
+  background:conic-gradient(from var(--fa),var(--accent),rgba(231,251,160,.18),rgba(1,75,48,.09),var(--accent));
+  animation:frameSpin 6.5s linear infinite;
+}
+.about-card{
+  background:rgba(231,251,160,.5);
+  border-radius:var(--r);
+  padding:38px 34px;
+}
+.about-card blockquote{
+  font-size:clamp(1rem,1.8vw,1.18rem);font-weight:600;line-height:1.8;
+  margin-bottom:14px;
+}
+.about-card-sub{font-size:clamp(1rem,1.8vw,1.18rem);font-weight:600;color:var(--green);line-height:1.8;margin-bottom:20px}
+.about-card cite{
+  font-size:.74rem;color:var(--dim);font-style:normal;
+  display:flex;align-items:center;gap:7px;
+}
+.about-card cite::before{content:'';display:block;width:12px;height:1px;background:var(--dim)}
+
+/* ═══ المدير التنفيذي ═══ */
+.exec{padding:96px 48px;border-bottom:1px solid var(--border)}
+.exec-inner{
+  max-width:800px;margin:0 auto;
+  display:grid;grid-template-columns:auto 1fr;
+  gap:52px;align-items:start;
+}
+
+/* إطار الصورة المربع المتحرك */
+.exec-photo-wrap{
+  width:264px;flex-shrink:0;
+  padding:2.5px;border-radius:22px;
+  background:conic-gradient(from var(--fa),var(--accent),rgba(231,251,160,.22),rgba(1,75,48,.1),var(--accent));
+  animation:frameSpin 4.5s linear infinite;
+}
+.exec-photo-wrap img{
+  width:100%;height:264px;
+  border-radius:19.5px;
+  object-fit:cover;object-position:top center;
+  display:block;
+}
+.exec-text{padding-top:6px}
+.exec-name{font-size:2rem;font-weight:700;margin-bottom:4px}
+.exec-role{font-size:.8rem;color:var(--dim);margin-bottom:12px}
+.exec-email-wrap{
+  display:inline-block;
+  padding:2px;border-radius:var(--pill);
+  background:conic-gradient(from var(--fa),var(--accent),rgba(231,251,160,.25),rgba(1,75,48,.12),var(--green),rgba(231,251,160,.25),var(--accent));
+  animation:frameSpin 3.5s linear infinite;
+  margin-bottom:2px;
+}
+.exec-email{
+  display:inline-flex;align-items:center;gap:7px;
+  font-size:.8rem;font-weight:600;direction:ltr;
+  background:var(--green);color:var(--accent);
+  padding:8px 20px;border-radius:var(--pill);
+  transition:opacity .25s,transform .3s var(--ease);
+}
+.exec-email svg{width:13px;height:13px;stroke:var(--accent);fill:none;stroke-width:1.6;stroke-linecap:round;flex-shrink:0}
+.exec-email:hover{opacity:.85;transform:translateY(-1px)}
+.exec-sep{width:24px;height:1px;background:var(--border);margin:20px 0}
+.exec-quote{
+  position:relative;
+  padding:18px 20px 18px 0;
+  border-right:2px solid rgba(231,251,160,.9);
+}
+.exec-quote::before{
+  content:'\201C';
+  position:absolute;top:-12px;right:-4px;
+  font-size:3.5rem;line-height:1;
+  color:var(--accent);font-weight:700;
+  opacity:.85;
+}
+.exec-quote p{
+  font-size:1.17rem;color:rgba(1,75,48,.72);line-height:2;font-style:italic;
+}
+
+/* ═══ من رحلاتنا ═══ */
+.gallery{padding:96px 0;border-bottom:1px solid var(--border)}
+.gallery-head{
+  padding:0 48px;
+  display:flex;align-items:baseline;justify-content:space-between;
+  margin-bottom:44px;flex-wrap:wrap;gap:10px;
+}
+.gallery-head h2{font-size:clamp(1.85rem,3.4vw,2.75rem);font-weight:700}
+.gallery-head a{
+  font-size:.84rem;color:var(--dim);
+  border-bottom:1px solid var(--border);padding-bottom:2px;
+  transition:color .25s,border-color .25s;
+}
+.gallery-head a:hover{color:var(--green);border-color:var(--green)}
+
+/*
+  الماركي اللانهائي الحقيقي
+  12 عنصراً (6 أصلية + 6 نسخ)
+  كل خانة: 280px إجمالاً (260px محتوى + 20px padding-right)
+  المسار الكلي: 12 × 280 = 3360px
+  الحركة: 6 × 280 = 1680px
+  عند الإعادة: النسخ مطابقة للأصليين، التعديل غير مرئي.
+*/
+.mq-outer{overflow:hidden;position:relative;padding:4px 0}
+.mq-outer::before,.mq-outer::after{
+  content:'';position:absolute;top:0;bottom:0;
+  width:90px;z-index:2;pointer-events:none;
+}
+.mq-outer::before{right:0;background:linear-gradient(to left,#fff,transparent)}
+.mq-outer::after {left: 0;background:linear-gradient(to right,#fff,transparent)}
+
+.mq-track{
+  display:flex;direction:ltr;
+  animation:mqRoll 50s linear infinite;
+  will-change:transform;
+}
+@keyframes mqRoll{
+  from{transform:translateX(0)}
+  to  {transform:translateX(-1680px)}
+}
+
+.mq-item{flex-shrink:0;width:280px;padding-right:20px}
+
+/* إطار #e7fba0 متحرك فقط */
+.mq-frame{
+  width:100%;aspect-ratio:4/5;
+  border-radius:16px;padding:2.5px;
+  background:conic-gradient(from var(--fa),var(--accent),rgba(231,251,160,.22),rgba(1,75,48,.09),var(--accent));
+  animation:frameSpin 4s linear infinite;
+}
+@supports not (background:conic-gradient(from 1deg,red,blue)){
+  .mq-frame{background:var(--accent)}
+}
+.mq-img{
+  width:100%;height:100%;
+  border-radius:calc(16px - 2.5px);overflow:hidden;
+}
+.mq-img img{
+  width:100%;height:100%;
+  object-fit:cover;object-position:center;
+  display:block;transition:transform .6s var(--ease);
+}
+.mq-item:hover .mq-img img{transform:scale(1.04)}
+
+/* ═══ دعوة للتواصل ═══ */
+.cta{padding:96px 48px;text-align:center;border-bottom:1px solid var(--border)}
+.cta-inner{max-width:560px;margin:0 auto}
+.cta h2{font-size:clamp(1.85rem,3.8vw,2.9rem);font-weight:700;line-height:1.22;margin-bottom:10px}
+.cta p{font-size:.9rem;color:var(--dim);margin-bottom:34px}
+.cta-btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+
+/* ═══ تذييل ═══ */
+footer{
+  background:rgba(231,251,160,.38);
+  border-top:1px solid rgba(1,75,48,.07);
+  padding:60px 48px 30px;
+}
+.ft-grid{
+  max-width:1100px;margin:0 auto;
+  display:grid;grid-template-columns:2fr 1fr 1fr 1.4fr;
+  gap:40px;margin-bottom:40px;
+}
+.ft-logo{height:32px;margin-bottom:13px}
+.ft-tag{font-size:.82rem;color:var(--dim);line-height:1.85;margin-bottom:18px}
+.ft-social{display:flex;gap:8px}
+.ft-social a{
+  width:30px;height:30px;border-radius:50%;
+  background:rgba(1,75,48,.06);border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;
+  transition:background .25s,transform .25s;
+}
+.ft-social a:hover{background:var(--green);transform:scale(1.08)}
+.ft-social a:hover svg{fill:var(--accent);stroke:var(--accent)}
+.ft-social svg{width:13px;height:13px}
+.ft-h{font-size:.8rem;font-weight:700;margin-bottom:13px}
+.ft-ul li{margin-bottom:8px}
+.ft-ul a{font-size:.8rem;color:var(--dim);transition:color .25s}
+.ft-ul a:hover{color:var(--green)}
+.ft-row{display:flex;align-items:flex-start;gap:7px;font-size:.8rem;color:var(--dim);margin-bottom:9px;line-height:1.6}
+.ft-row svg{width:12px;height:12px;stroke:var(--dim);fill:none;flex-shrink:0;margin-top:3px}
+.ft-row a{color:inherit;transition:color .25s}
+.ft-row a:hover{color:var(--green)}
+.ft-bottom{
+  max-width:1100px;margin:0 auto;
+  padding-top:18px;border-top:1px solid rgba(1,75,48,.07);
+  display:flex;align-items:center;justify-content:space-between;
+  flex-wrap:wrap;gap:8px;
+}
+.ft-copy{font-size:.74rem;color:rgba(1,75,48,.35)}
+.ft-mark{font-size:.7rem;color:rgba(1,75,48,.22)}
+
+/* ═══ استجابة ═══ */
+@media(max-width:1024px){
+  .about-inner{grid-template-columns:1fr;gap:36px}
+  .ft-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:768px){
+  .nav-links,.nav-cta{display:none}
+  .nav-ham{display:flex}
+  .hero,.services,.stats,.about,.exec,.cta,footer{padding-left:24px;padding-right:24px}
+  .gallery-head{padding:0 24px}
+  .svc-grid{grid-template-columns:1fr 1fr}
+  .svc-head{flex-direction:column;align-items:flex-start}
+  .stats-inner{grid-template-columns:1fr}
+  .stat:first-child{border-left:none;border-bottom:1px solid var(--border)}
+  .exec-inner{grid-template-columns:1fr;gap:32px;text-align:center}
+  .exec-photo-wrap{margin:0 auto}
+  .exec-sep{margin:18px auto}
+  .ft-grid{grid-template-columns:1fr;gap:24px}
+}
+@media(max-width:500px){
+  .svc-grid{grid-template-columns:1fr}
+  .hero-h1{font-size:2.6rem}
+}
+</style>
+</head>
+<body>
+
+<!-- ══ شريط التنقل ══ -->
+<nav class="nav" id="nav">
+  <a class="nav-logo" href="index.html" aria-label="سيرة">
+    <img src="logo seera.svg" alt="سيرة للسياحة والسفر">
+  </a>
+  <ul class="nav-links" role="list">
+    <li><a href="#services"    class="nav-link">خدماتنا</a></li>
+    <li><a href="#about"       class="nav-link">لماذا سيرة؟</a></li>
+    <li><a href="#gallery"     class="nav-link">رحلاتنا</a></li>
+    <li><a href="contact.html" class="nav-link">تواصل</a></li>
+  </ul>
+  <div class="nav-end">
+    <a href="contact.html" class="nav-cta">احجز الآن</a>
+    <button class="nav-ham" id="ham" aria-label="القائمة" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mob" id="mob" role="dialog" aria-modal="true" aria-label="القائمة">
+  <button class="mob-close" id="mob-close" aria-label="إغلاق">
+    <svg viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg>
+  </button>
+  <nav class="mob-nav">
+    <a href="#services"    class="mob-link" onclick="closeMob()">خدماتنا</a>
+    <a href="#about"       class="mob-link" onclick="closeMob()">لماذا سيرة؟</a>
+    <a href="#gallery"     class="mob-link" onclick="closeMob()">رحلاتنا</a>
+    <a href="contact.html" class="mob-link" onclick="closeMob()">تواصل معنا</a>
+  </nav>
+  <div class="mob-sep"></div>
+  <div class="mob-social">
+    <a href="https://www.instagram.com/seeratravel" target="_blank" rel="noopener" aria-label="إنستغرام">
+      <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="var(--green)" stroke="none"/></svg>
+    </a>
+    <a href="https://www.facebook.com/seeratravel" target="_blank" rel="noopener" aria-label="فيسبوك">
+      <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+    </a>
+    <a href="https://wa.me/962798019275" target="_blank" rel="noopener" aria-label="واتساب">
+      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12.05 2A9.95 9.95 0 002 12.05c0 1.76.462 3.484 1.338 5.007L2 22l5.1-1.337A9.96 9.96 0 0012.054 22C17.51 22 22 17.51 22 12.054 22 6.596 17.51 2 12.05 2z" stroke="none" fill="var(--green)"/></svg>
+    </a>
+  </div>
+</div>
+
+<!-- ══ البطل ══ -->
+<section class="hero" id="home">
+  <svg class="orbital" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+    <defs>
+      <path id="op1" d="M550,300 A250,88,-18,1,0,50,300 A250,88,-18,1,0,550,300"/>
+      <path id="op2" d="M490,300 A190,66,52,1,0,110,300 A190,66,52,1,0,490,300"/>
+    </defs>
+    <circle cx="300" cy="300" r="258" fill="none" stroke="#014b30" stroke-width=".5" opacity=".07"/>
+    <use href="#op1" fill="none" stroke="#014b30" stroke-width=".7" opacity=".11"/>
+    <use href="#op2" fill="none" stroke="#014b30" stroke-width=".55" opacity=".08"/>
+    <circle r="3.2" fill="#014b30" opacity=".20">
+      <animateMotion dur="28s" repeatCount="indefinite" calcMode="linear"><mpath href="#op1"/></animateMotion>
+    </circle>
+    <circle r="2.3" fill="#014b30" opacity=".16">
+      <animateMotion dur="42s" repeatCount="indefinite" begin="-19s" calcMode="linear"><mpath href="#op2"/></animateMotion>
+    </circle>
+  </svg>
+
+  <div class="hero-inner">
+    <div class="hero-kicker" aria-hidden="true">سيرة للسياحة والسفر — الأردن</div>
+    <h1 class="hero-h1">
+      <em>سيرة..</em><br>
+      بداية مسيرتك<br>
+      من الأردن حول العالم
+    </h1>
+    <div class="hero-btns">
+      <a href="contact.html" class="btn-p">احجز رحلتك</a>
+      <a href="#services"    class="btn-g">تعرّف على خدماتنا</a>
+    </div>
+  </div>
+
+  <div class="scroll-hint" aria-hidden="true">
+    <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+  </div>
+</section>
+
+<!-- ══ الخدمات ══ -->
+<section class="services" id="services">
+  <div class="svc-wrap">
+    <div class="svc-head">
+      <div class="reveal">
+        <div class="sec-tag">ما نقدّمه</div>
+        <h2 style="font-size:clamp(1.9rem,3.8vw,3rem);font-weight:700">خدماتنا</h2>
+      </div>
+      <p class="sub reveal d1">نغطّي كل ما تحتاجه رحلتك، من اختيار التذكرة حتى لحظة الوصول.</p>
+    </div>
+    <div class="svc-grid">
+      <article class="svc-card reveal" tabindex="0">
+        <div class="svc-card-bg"></div>
+        <svg class="svc-icon" viewBox="0 0 24 24"><path d="M22 2L11 13M22 2L15 22l-4-9M22 2L2 9l9 4"/></svg>
+        <h3 class="svc-name">حجوزات الطيران</h3>
+        <p class="svc-desc">أفضل الأسعار على جميع الخطوط العالمية مع مرونة في الاختيار.</p>
+      </article>
+      <article class="svc-card reveal d1" tabindex="0">
+        <div class="svc-card-bg"></div>
+        <svg class="svc-icon" viewBox="0 0 24 24"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg>
+        <h3 class="svc-name">حجوزات الفنادق</h3>
+        <p class="svc-desc">إقامة مريحة في أرقى الفنادق بأسعار تنافسية وخدمة متميزة.</p>
+      </article>
+      <article class="svc-card reveal d2" tabindex="0">
+        <div class="svc-card-bg"></div>
+        <svg class="svc-icon svc-icon-fill" viewBox="0 0 936.36 768.39" style="height:35px;width:43px"><path d="M719.63,635.65H216.73V132.75h502.9v502.9ZM258.61,593.77h419.14V174.63h-419.14v419.14Z"/><rect x="237.67" y="271.34" width="461.02" height="41.88"/></svg>
+        <h3 class="svc-name">برامج الحج</h3>
+        <p class="svc-desc">برامج حج معتمدة ومتكاملة تضمن أداء الفريضة بيسر وراحة.</p>
+      </article>
+      <article class="svc-card reveal" tabindex="0">
+        <div class="svc-card-bg"></div>
+        <svg class="svc-icon svc-icon-fill" viewBox="0 0 936.36 768.39" style="height:35px;width:43px"><path d="M719.63,635.65H216.73V132.75h502.9v502.9ZM258.61,593.77h419.14V174.63h-419.14v419.14Z"/><rect x="237.67" y="271.34" width="461.02" height="41.88"/></svg>
+        <h3 class="svc-name">برامج العمرة</h3>
+        <p class="svc-desc">عمرة منظمة مع أرقى الإقامات قرب المسجد الحرام.</p>
+      </article>
+      <article class="svc-card reveal d1" tabindex="0">
+        <div class="svc-card-bg"></div>
+        <svg class="svc-icon" viewBox="0 0 24 24"><rect x="3" y="2" width="18" height="20" rx="2"/><circle cx="12" cy="11" r="3"/><path d="M7 7h2M15 7h2M7 17h10"/></svg>
+        <h3 class="svc-name">إصدار التأشيرات</h3>
+        <p class="svc-desc">إجراءات سهلة لجميع تأشيرات دول العالم بسرعة ودقة.</p>
+      </article>
+      <article class="svc-card reveal d2" tabindex="0">
+        <div class="svc-card-bg"></div>
+        <svg class="svc-icon" viewBox="0 0 24 24"><path d="M9 11l3 3 8-8"/><path d="M20 12v7a2 2 0 01-2 2H6a2 2 0 01-2-2V5a2 2 0 012-2h9"/></svg>
+        <h3 class="svc-name">إنجاز المعاملات</h3>
+        <p class="svc-desc">متابعة شخصية لجميع المعاملات الرسمية المتعلقة بالسفر.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══ أرقام ══ -->
+<section class="stats">
+  <div class="stats-inner">
+    <div class="stat reveal">
+      <span class="stat-n" data-count="10" data-prefix="+">+0</span>
+      <span class="stat-l">سنوات خبرة في<br>قطاع السياحة والسفر</span>
+    </div>
+    <div class="stat reveal d1">
+      <span class="stat-n" data-count="50" data-prefix="+">+0</span>
+      <span class="stat-l">وجهة سياحية<br>حول العالم</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══ عن سيرة ══ -->
+<section class="about" id="about">
+  <div class="about-inner">
+    <div>
+      <div class="sec-tag reveal">لماذا سيرة؟</div>
+      <p class="about-h reveal d1">نفهم احتياجاتك<br>ونهتم بما يهمك.</p>
+      <p class="about-body reveal d2">
+        في سيرة نعمل منذ أكثر من عشر سنوات على تقديم خدمات سفر متكاملة لعملائنا في الأردن والمنطقة.
+        <br><br>
+        كل رحلة تمر عبر نفس الاهتمام بالتفاصيل: من حجز الطيران والفنادق وتيسير التأشيرة، إلى البرامج المعتمدة للحج والعمرة.
+      </p>
+      <a href="contact.html" class="about-link reveal d3">
+        تواصل معنا
+        <svg viewBox="0 0 16 16"><path d="M8 3l5 5-5 5M13 8H3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+
+    <div class="about-card-wrap reveal d1">
+      <div class="about-card">
+        <blockquote>
+          أفضل ما تقدمه وكالة السفر ليس الأسعار فقط، بل الاهتمام والرعاية والشعور بالطمأنينة طوال الرحلة.
+        </blockquote>
+        <p class="about-card-sub">إلى جانب الأسعار التنافسية والخدمة التي تليق بعملاء سيرة.</p>
+        <cite>فريق سيرة</cite>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ المدير التنفيذي ══ -->
+<section class="exec" id="exec">
+  <div class="exec-inner reveal">
+    <div class="exec-photo-wrap">
+      <img src="qais.JPG" alt="قيس الشمايلة" loading="lazy">
+    </div>
+    <div class="exec-text">
+      <div class="exec-name">قيس الشمايلة</div>
+      <div class="exec-role">المدير التنفيذي</div>
+      <div class="exec-email-wrap">
+        <a href="mailto:qais@seeratravel.co" class="exec-email">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+          qais@seeratravel.co
+        </a>
+      </div>
+      <div class="exec-sep"></div>
+      <blockquote class="exec-quote">
+        <p>في سيرة نؤمن أن الاهتمام بالتفاصيل هو ما يصنع الفرق. فريقنا يرافق عملاءنا خطوة بخطوة لتقديم تجربة سفر مريحة وواضحة من البداية حتى العودة.</p>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- ══ من رحلاتنا ══ -->
+<section class="gallery" id="gallery">
+  <div class="gallery-head">
+    <div>
+      <div class="sec-tag">لقطات من رحلاتنا</div>
+      <h2 class="reveal">من رحلاتنا</h2>
+    </div>
+    <a href="contact.html">احجز رحلتك ←</a>
+  </div>
+
+  <div class="mq-outer">
+    <div class="mq-track" role="region" aria-label="معرض صور">
+      <div class="mq-item"><div class="mq-frame"><div class="mq-img"><img src="pic01.jpeg" alt="رحلة 1" loading="lazy"></div></div></div>
+      <div class="mq-item"><div class="mq-frame"><div class="mq-img"><img src="pic02.jpeg" alt="رحلة 2" loading="lazy"></div></div></div>
+      <div class="mq-item"><div class="mq-frame"><div class="mq-img"><img src="pic03.jpeg" alt="رحلة 3" loading="lazy"></div></div></div>
+      <div class="mq-item"><div class="mq-frame"><div class="mq-img"><img src="pic04.jpeg" alt="رحلة 4" loading="lazy"></div></div></div>
+      <div class="mq-item"><div class="mq-frame"><div class="mq-img"><img src="pic05.jpeg" alt="رحلة 5" loading="lazy"></div></div></div>
+      <div class="mq-item"><div class="mq-frame"><div class="mq-img"><img src="pic06.jpeg" alt="رحلة 6" loading="lazy"></div></div></div>
+      <div class="mq-item" aria-hidden="true"><div class="mq-frame"><div class="mq-img"><img src="pic01.jpeg" alt="" loading="lazy"></div></div></div>
+      <div class="mq-item" aria-hidden="true"><div class="mq-frame"><div class="mq-img"><img src="pic02.jpeg" alt="" loading="lazy"></div></div></div>
+      <div class="mq-item" aria-hidden="true"><div class="mq-frame"><div class="mq-img"><img src="pic03.jpeg" alt="" loading="lazy"></div></div></div>
+      <div class="mq-item" aria-hidden="true"><div class="mq-frame"><div class="mq-img"><img src="pic04.jpeg" alt="" loading="lazy"></div></div></div>
+      <div class="mq-item" aria-hidden="true"><div class="mq-frame"><div class="mq-img"><img src="pic05.jpeg" alt="" loading="lazy"></div></div></div>
+      <div class="mq-item" aria-hidden="true"><div class="mq-frame"><div class="mq-img"><img src="pic06.jpeg" alt="" loading="lazy"></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ دعوة للتواصل ══ -->
+<section class="cta">
+  <div class="cta-inner reveal">
+    <div class="sec-tag" style="justify-content:center">جاهزون لمساعدتك</div>
+    <h2>ابدأ رحلتك معنا اليوم</h2>
+    <p>تواصل معنا وسنخطط لرحلتك من البداية حتى النهاية</p>
+    <div class="cta-btns">
+      <a href="tel:00962798019275" class="btn-p">اتصل الآن</a>
+      <a href="https://wa.me/962798019275" target="_blank" rel="noopener" class="btn-g">واتساب</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ تذييل ══ -->
+<footer>
+  <div class="ft-grid">
+    <div>
+      <img class="ft-logo" src="logo seera.svg" alt="سيرة">
+      <p class="ft-tag">بداية مسيرتك من الأردن حول العالم.<br>حجوزات طيران وفنادق، حج وعمرة، تأشيرات.</p>
+      <div class="ft-social">
+        <a href="https://www.facebook.com/seeratravel" target="_blank" rel="noopener" aria-label="فيسبوك">
+          <svg viewBox="0 0 24 24" fill="var(--green)" stroke="none"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/seeratravel" target="_blank" rel="noopener" aria-label="إنستغرام">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.7" stroke-linecap="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="var(--green)" stroke="none"/></svg>
+        </a>
+        <a href="https://wa.me/962798019275" target="_blank" rel="noopener" aria-label="واتساب">
+          <svg viewBox="0 0 24 24" fill="var(--green)"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12.05 2A9.95 9.95 0 002 12.05c0 1.76.462 3.484 1.338 5.007L2 22l5.1-1.337A9.96 9.96 0 0012.054 22C17.51 22 22 17.51 22 12.054 22 6.596 17.51 2 12.05 2z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div>
+      <div class="ft-h">الموقع</div>
+      <ul class="ft-ul">
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="#services">خدماتنا</a></li>
+        <li><a href="#about">لماذا سيرة؟</a></li>
+        <li><a href="#gallery">رحلاتنا</a></li>
+        <li><a href="contact.html">تواصل معنا</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="ft-h">خدماتنا</div>
+      <ul class="ft-ul">
+        <li><a href="#">حجوزات الطيران</a></li>
+        <li><a href="#">حجوزات الفنادق</a></li>
+        <li><a href="#">برامج الحج</a></li>
+        <li><a href="#">برامج العمرة</a></li>
+        <li><a href="#">التأشيرات</a></li>
+        <li><a href="#">إنجاز المعاملات</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="ft-h">تواصل معنا</div>
+      <div class="ft-row">
+        <svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.28-.28.7-.37 1.06-.23 1.16.4 2.42.62 3.74.62A1 1 0 0121 17v3.5A1 1 0 0120 21.5C10.84 21.5 3.5 14.16 3.5 5A1 1 0 014.5 4H8a1 1 0 011 .94c0 1.32.22 2.58.62 3.74.14.36.05.78-.23 1.06L6.6 10.8z"/></svg>
+        <a href="tel:00962798019275" dir="ltr">+962 79 801 9275</a>
+      </div>
+      <div class="ft-row">
+        <svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.28-.28.7-.37 1.06-.23 1.16.4 2.42.62 3.74.62A1 1 0 0121 17v3.5A1 1 0 0120 21.5C10.84 21.5 3.5 14.16 3.5 5A1 1 0 014.5 4H8a1 1 0 011 .94c0 1.32.22 2.58.62 3.74.14.36.05.78-.23 1.06L6.6 10.8z"/></svg>
+        <a href="tel:00962777982565" dir="ltr">+962 77 798 2565</a>
+      </div>
+      <div class="ft-row">
+        <svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+        <a href="mailto:info@seeratravel.co">info@seeratravel.co</a>
+      </div>
+      <div class="ft-row">
+        <svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span>عمّان، شارع عبدالله أبو غوشة، مجمع رائد خلف</span>
+      </div>
+    </div>
+  </div>
+  <div class="ft-bottom">
+    <span class="ft-copy">© 2026 سيرة للسياحة والسفر والحج والعمرة. جميع الحقوق محفوظة.</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  'use strict';
+  const nav=document.getElementById('nav');
+  window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>50),{passive:true});
+
+  const ham=document.getElementById('ham'),mob=document.getElementById('mob');
+  function openMob(){mob.classList.add('open');ham.classList.add('open');ham.setAttribute('aria-expanded','true');}
+  function closeMob(){mob.classList.remove('open');ham.classList.remove('open');ham.setAttribute('aria-expanded','false');}
+  window.closeMob=closeMob;
+  ham.addEventListener('click',e=>{e.stopPropagation();mob.classList.contains('open')?closeMob():openMob();});
+  document.getElementById('mob-close').addEventListener('click',closeMob);
+  document.addEventListener('click',e=>{if(mob.classList.contains('open')&&!mob.contains(e.target)&&e.target!==ham)closeMob();});
+
+  const io=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+  },{threshold:.1});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  document.querySelectorAll('.svc-card').forEach(card=>{
+    card.addEventListener('click',()=>{
+      document.querySelectorAll('.svc-card').forEach(c=>c.classList.remove('active'));
+      card.classList.toggle('active');
+    });
+    card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();card.click();}});
+  });
+
+  const secs=[...document.querySelectorAll('section[id]')];
+  const links=[...document.querySelectorAll('.nav-link')];
+  window.addEventListener('scroll',()=>{
+    let cur='';
+    secs.forEach(s=>{if(window.scrollY>=s.offsetTop-120)cur=s.id;});
+    links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+cur));
+  },{passive:true});
+
+  // عداد الأرقام
+  function animateCount(el){
+    const target=+el.dataset.count;
+    const prefix=el.dataset.prefix||'';
+    const duration=1800;
+    const step=16;
+    const steps=duration/step;
+    let current=0;
+    const inc=target/steps;
+    const timer=setInterval(()=>{
+      current+=inc;
+      if(current>=target){current=target;clearInterval(timer);}
+      el.textContent=prefix+Math.floor(current);
+    },step);
+  }
+  const countIO=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        animateCount(e.target);
+        countIO.unobserve(e.target);
+      }
+    });
+  },{threshold:.5});
+  document.querySelectorAll('[data-count]').forEach(el=>countIO.observe(el));
+})();
+</script>
+</body>
+</html>
